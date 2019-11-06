@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="one">
+        <h1>Book</h1>
+        <% for (var i = 0; i < book.length; i++) {%>
+            <p class = "onclick">
+              <a href="/books/<%=book[i].id%>" class = "onclick"><%=book[i].name%></a>
+            </p>
+            <p class = "hide"><a href="#">link</a></p>
+        <%}%>
+      </div>
+      <div class="two">
+        <h1>Rating:</h1>
+        <% for (var i = 0; i < book.length; i++) {%>
+          <p><%=book[i].rating%></p>
+        <%}%>
+      </div>
+      <div class="three">
+        <h1>Stats:</h1>
+      </div>
+    </div>
+  </body>
+</html>

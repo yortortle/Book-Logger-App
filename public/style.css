@@ -8,7 +8,7 @@ p{
 }
 
 .one{
-  margin-left: 25px;
+  /* margin-left: 25px; */
 }
 .onclick:hover{
   color: blue;
@@ -25,9 +25,17 @@ a{
 
 .container{
   display: flex;
+  justify-content: space-around;
+  margin: 15px;
+  padding: 15px;
 }
 
 .two{
-  margin-left: 75px;
-  width: 200px;
+  /* margin-left: 75px; */
+  /* width: 200px; */
+}
+
+.test{
+  display: flex;
+  justify-content: space-between;
 }

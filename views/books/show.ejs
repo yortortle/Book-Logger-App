@@ -2,11 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/show.css">
     <title></title>
   </head>
   <body>
     <div class="container">
-
+      <div class="one">
+        <p>Name: <%=book.name%></p>
+        <p>Author: <%=book.description%></p>
+        <p>Pages: <%=book.page%></p>
+        <p>Rating: <%=book.rating%></p>
+        <p>Re-read: <%=book.number-1%></p>
+        <br/><br/>
+        <div class="flextest">
+          <a href="#">EDIT</a>
+          <a href="/books">RETURN</a>
+        </div>
+      </div>
+      <div class="two">
+        <img class = "img" src="<%=book.img%>" alt="test">
+      </div>
     </div>
+
+
   </body>
 </html>

@@ -7,15 +7,16 @@
   </head>
   <body>
     <div class="container">
-
       <div class="one">
         <h1>Book</h1>
         <% for (var i = 0; i < book.length; i++) {%>
             <p class = "onclick">
               <a href="/books/<%=book[i].id%>" class = "onclick"><%=book[i].name%></a>
+
             </p>
-            <p class = "hide"><a href="#">link</a></p>
+
         <%}%>
+
       </div>
       <div class="two">
         <h1>Rating:</h1>
@@ -25,6 +26,17 @@
       </div>
       <div class="three">
         <h1>Stats:</h1>
+        <p>Books Read: <%=book.length%></p>
+      </div>
+      <div class="four">
+        <h1>Modify:</h1>
+        <% for (var i = 0; i < book.length; i++) {%>
+          <p>
+          <form class="" action="/books/<%=book[i].id%>?method=DELETE" method="POST">
+            <input type="submit" name="" value="DELETE">
+          </form>
+          </p>
+        <%}%>
       </div>
     </div>
   </body>

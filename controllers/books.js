@@ -27,9 +27,10 @@ router.get("/seed", (req, res) => {
         },
       ]
     )
-    res.redirect("/");
+    res.redirect("/books");
 })
 
+//index route and various ejs routes
 router.get("/", (req, res) => {
   Books.find({}, (error, foundBooks) => {
     res.render("books/index.ejs", {
@@ -46,12 +47,18 @@ router.get("/:id/edit", (req, res) => {
   res.send("edit");
 })
 
+//show route
 router.get("/:id", (req, res) => {
-  // res.send("Show")
   Books.findById(req.params.id, (error, foundBook) => {
     res.render("books/show.ejs", {
       book: foundBook
     })
+  })
+})
+
+router.delete("/:id", (req, res) => {
+  Books.findByIdAndRemove(req.params.id, (err, deletedBook) => {
+    res.redirect("/books")
   })
 })
 

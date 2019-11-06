@@ -32,8 +32,8 @@
         <h1>Modify:</h1>
         <% for (var i = 0; i < book.length; i++) {%>
           <p>
-          <form class="" action="/books/<%=book[i].id%>?method=DELETE" method="POST">
-            <input type="submit" name="" value="DELETE">
+          <form class="" action="/books/<%=book[i].id%>?_method=DELETE" method="POST">
+            <input class ="delete"type="submit" name="" value="DELETE">
           </form>
           </p>
         <%}%>

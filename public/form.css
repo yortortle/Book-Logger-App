@@ -1,3 +1,40 @@
 body{
-  
+  font-family: sans-serif;
+  font-size: 14px;
+  background-color: #E0FFFF;
+
+}
+
+.container{
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  width: 400px;
+  padding: 20px;
+  margin: 40px;
+  background-color: #F0FFFF;
+
+}
+
+input{
+  display: inline-block;
+  margin: 10px;
+}
+
+.text{
+  width: 300px;
+}
+
+.text:hover{
+  background-color: rgba(255, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.container2{
+  display: Flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+A{
+  text-decoration: none;
 }

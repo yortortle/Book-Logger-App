@@ -3,14 +3,19 @@
   <% include ./partials/form.ejs%>
   <body>
     <div class="container">
-      <form class="input1" action="/books" method="post">
-        Name: <input type="text" name="" value=""><br/>
-        Author: <input type="text" name="" value=""><br/>
-        Pages: <input type="text" name="" value=""><br/>
-        Rating: <input type="text" name="" value=""><br/>
-        Img: <input type="text" name="" value=""><br/>
-        <input type="submit" name="" value="SUBMIT">
-      </form>
+      <div class="form">
+        <form class="input1" action="/books" method="post">
+          Name: &nbsp<input class = "text" type="text" name="name" value=""><br/>
+          Author: <input class = "text" type="text" name="description" value=""><br/>
+          Pages: <input class = "text" type="text" name="page" value=""><br/>
+          Rating: <input class = "text" type="text" name="rating" value=""><br/>
+          Image: <input class = "text" type="text" name="img" value=""><br/>
+          <div class="container2">
+            <input class = "button" type="submit" name="" value="SUBMIT">
+            <a href="/books">RETURN</a>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>

@@ -39,12 +39,25 @@ router.get("/", (req, res) => {
   })
 })
 
+//new route
 router.get("/new", (req, res) => {
   res.render("books/new.ejs")
 })
 
+//edit display route
 router.get("/:id/edit", (req, res) => {
-  res.send("edit");
+  Books.findById(req.params.id, (err, foundBook) => {
+    res.render("books/edit.ejs", {
+      book: foundBook
+    })
+  })
+})
+
+router.put("/:id", (req, res) => {
+  Books.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedBook) => {
+    console.log(updatedBook);
+    res.redirect("/books")
+  })
 })
 
 //show route
@@ -62,5 +75,16 @@ router.delete("/:id", (req, res) => {
   })
 })
 
+router.post("/", (req, res) => {
+  console.log(req.body);
+  Books.create(req.body, (err, createdBook) => {
+    if (err) {
+      alert("Information not entered proberly!")
+    }
+    else {
+      res.redirect("/books");
+    }
+  })
+})
 
 module.exports = router;

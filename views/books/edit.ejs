@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <% include ./partials/form.ejs%>
+  <body>
+    <div class="container">
+      <div class="form">
+        <form class="input1" action="/books/<%=book.id%>?_method=PUT" method="post">
+          Name: &nbsp<input class = "text" type="text" name="name" value="<%=book.name%>"><br/>
+          Author: <input class = "text" type="text" name="description" value="<%=book.description%>"><br/>
+          Pages: <input class = "text" type="text" name="page" value="<%=book.page%>"><br/>
+          Rating: <input class = "text" type="text" name="rating" value="<%=book.rating%>"><br/>
+          Image: <input class = "text" type="text" name="img" value="<%=book.img%>"><br/>
+          <div class="container2">
+            <input class = "button" type="submit" name="" value="SUBMIT">
+            <a href="/books">RETURN</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

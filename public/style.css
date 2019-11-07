@@ -1,5 +1,6 @@
 body{
-  background-color: #F0FFFF;
+  /* background-color: #F0FFFF;*/
+  background-color: #E0FFFF;
   font-family: sans-serif;
 }
 h1{
@@ -54,7 +55,9 @@ a{
 .bigContainer{
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  background-color: #E0FFFF
+  /* background-color: #E0FFFF */
+  background-color: #F0FFFF;
+
 }
 
 #new{

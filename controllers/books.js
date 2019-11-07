@@ -40,7 +40,7 @@ router.get("/", (req, res) => {
 })
 
 router.get("/new", (req, res) => {
-  res.send("new")
+  res.render("books/new.ejs")
 })
 
 router.get("/:id/edit", (req, res) => {

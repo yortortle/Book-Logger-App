@@ -8,32 +8,34 @@
   <body>
     <div class="bigContainer">
       <div class="header">
-        <p>testtestsetsetsetste</p>
+        <h1>Instructions:</h1>
+        <p>Click on the "New Entry" button to add a new book to your log. If you'd like to see more information or change entry information, click the name of the book. If you'd like to delete an entry, simple click on the delete button next to the title. This book log app is designed to be simplistic and efficient, navigation of it should reflect that. </p>
+
+        <form class="asdf" action="/books/new" method="GET"><br/>
+          <input id="new" type="submit" name="" value="New Entry">
+        </form>
       </div>
       <div class="container">
         <div class="one">
-          <h1>Book:</h1>
+          <h3>Book:</h3>
           <% for (var i = 0; i < book.length; i++) {%>
               <p class = "onclick">
                 <a href="/books/<%=book[i].id%>" class = "onclick"><%=book[i].name%></a>
-
               </p>
-
           <%}%>
-
         </div>
         <div class="two">
-          <h1>Rating:</h1>
+          <h3>Rating:</h3>
           <% for (var i = 0; i < book.length; i++) {%>
             <p><%=book[i].rating%></p>
           <%}%>
         </div>
         <div class="three">
-          <h1>Stats:</h1>
+          <h3>Stats:</h3>
           <p>Books Read: <%=book.length%></p>
         </div>
         <div class="four">
-          <h1>Modify:</h1>
+          <h3>Modify:</h3>
           <% for (var i = 0; i < book.length; i++) {%>
             <p>
             <form class="" action="/books/<%=book[i].id%>?_method=DELETE" method="POST">

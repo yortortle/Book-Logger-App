@@ -1,6 +1,5 @@
 body{
   background-color: #F0FFFF;
-
   font-family: sans-serif;
 }
 h1{
@@ -11,7 +10,8 @@ p{
 }
 
 .header{
-  margin-left: 100px;
+  margin-left: 63px;
+  margin-top: 25px;
 }
 
 .one{
@@ -33,7 +33,7 @@ a{
 .container{
   display: flex;
   justify-content: space-around;
-  margin: 15px;
+  margin: 0px 15px 15px 15px;
   padding: 15px;
 }
 
@@ -55,4 +55,15 @@ a{
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #E0FFFF
+}
+
+#new{
+  border-radius: 5px;
+  padding: 9px;
+  font-size: 14px;
+  background-color: #F0FFFF;
+}
+
+.asdf{
+  text-align: center;
 }

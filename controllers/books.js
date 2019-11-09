@@ -82,6 +82,7 @@ router.post("/", (req, res) => {
       alert("Information not entered proberly!")
     }
     else {
+      console.log(createdBook);
       res.redirect("/books");
     }
   })

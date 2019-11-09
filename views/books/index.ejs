@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <title></title>
+    <!-- <script src="src/app.js" charset="utf-8"></script> -->
+    <script type="text/javascript">
+    console.log("test");
+    let num1 = 0;
+    </script>
+    <title>Index</title>
   </head>
+
   <body>
     <div class="bigContainer">
       <div class="header">
         <h1>Instructions:</h1>
-        <p>Click on the "New Entry" button to add a new book to your log. If you'd like to see more information or change entry information, click the name of the book. If you'd like to delete an entry, simple click on the delete button next to the title. This book log app is designed to be simplistic and efficient, navigation of it should reflect that. </p>
-
-        <form class="asdf" action="/books/new" method="GET"><br/>
-          <input id="new" type="submit" name="" value="New Entry">
-        </form>
+        <p>Click on the "New Entry" button to add a new book to your log. If you'd like to see more information or change entry information, click the name of the book. If you'd like to delete an entry, click on the delete button next to the title. This book log app is designed to be simplistic and efficient, navigation of it should reflect that. </p>
       </div>
       <div class="container">
         <div class="one">
@@ -23,6 +25,9 @@
                 <a href="/books/<%=book[i].id%>" class = "onclick"><%=book[i].name%></a>
               </p>
           <%}%>
+          <form class="asdf" action="/books/new" method="GET"><br/>
+            <input id="new" type="submit" name="" value="ADD BOOK">
+          </form>
         </div>
         <div class="two">
           <h3>Rating:</h3>
@@ -33,6 +38,16 @@
         <div class="three">
           <h3>Stats:</h3>
           <p>Books Read: <%=book.length%></p>
+          <% let num1 = 0; %>
+          <% let num2 = 0; %>
+          <% let num3 = 0; %>
+          <% for (var i = 0; i < book.length; i++) {%>
+            <%num1 += book[i].page%>
+            <%num2 = num1%60%>
+          <%}%>
+          <p></p>
+          <p>Total Pages: <%=num1%></p>
+          <p>Total Hours: <%=num2%></p>
         </div>
         <div class="four">
           <h3>Modify:</h3>

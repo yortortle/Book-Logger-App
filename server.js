@@ -50,7 +50,7 @@ const booksController = require("./controllers/books.js");
 app.use("/books", booksController);
 
 app.get("/", (req, res) => {
-  res.send("Home")
+  res.render("home.ejs");
 })
 
 app.get("/home", (req, res) => {

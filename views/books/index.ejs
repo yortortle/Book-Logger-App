@@ -16,8 +16,11 @@
       <div class="header">
         <h1>Instructions:</h1>
         <p>Click on the "New Entry" button to add a new book to your log. If you'd like to see more information or change entry information, click the name of the book. If you'd like to delete an entry, click on the delete button next to the title. This book log app is designed to be simplistic and efficient, navigation of it should reflect that. </p>
+
+
       </div>
       <div class="container">
+
         <div class="one">
           <h3>Book:</h3>
           <% for (var i = 0; i < book.length; i++) {%>
@@ -29,12 +32,16 @@
             <input id="new" type="submit" name="" value="ADD BOOK">
           </form>
         </div>
+
+
         <div class="two">
           <h3>Rating:</h3>
           <% for (var i = 0; i < book.length; i++) {%>
             <p><%=book[i].rating%></p>
           <%}%>
         </div>
+
+
         <div class="three">
           <h3>Stats:</h3>
           <p>Books Read: <%=book.length%></p>
@@ -47,7 +54,6 @@
           <%}%>
           <p></p>
           <p>Total Pages: <%=num1%></p>
-          <p>Total Hours: <%=num2%></p>
         </div>
         <div class="four">
           <h3>Modify:</h3>

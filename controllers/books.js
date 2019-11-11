@@ -33,7 +33,7 @@ router.get("/seed", (req, res) => {
 //index route and various ejs routes
 router.get("/", (req, res) => {
   if (req.session.username) {
-    Books.find({}, (error, foundBooks) => {
+    Books.find({username1: req.session.username}, (error, foundBooks) => {
       res.render("books/index.ejs", {
         book: foundBooks,
         username: req.session.username
@@ -86,7 +86,7 @@ router.post("/", (req, res) => {
   console.log(req.body);
   const user = req.session.username;
   console.log(user);
-  // req.body.username1 = user;
+  req.body.username1 = user;
   console.log(req.body);
   Books.create(req.body, (err, createdBook) => {
     if (err) {

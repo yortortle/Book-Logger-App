@@ -32,11 +32,18 @@ router.get("/seed", (req, res) => {
 
 //index route and various ejs routes
 router.get("/", (req, res) => {
-  Books.find({}, (error, foundBooks) => {
-    res.render("books/index.ejs", {
-      book: foundBooks
+  if (req.session.username) {
+    Books.find({}, (error, foundBooks) => {
+      res.render("books/index.ejs", {
+        book: foundBooks,
+        username: req.session.username
+      })
     })
-  })
+  }
+  else {
+    res.redirect("/")
+    console.log("not logged in");
+  }
 })
 
 //new route
@@ -79,7 +86,8 @@ router.post("/", (req, res) => {
   console.log(req.body);
   Books.create(req.body, (err, createdBook) => {
     if (err) {
-      alert("Information not entered proberly!")
+      console.log(err);
+      // alert("Information not entered proberly!")
     }
     else {
       console.log(createdBook);

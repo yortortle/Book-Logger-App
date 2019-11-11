@@ -42,12 +42,24 @@ app.use(express.urlencoded({ extended: false }));// extended: false - does not a
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
+app.use(session({
+	  secret: "asdf", //a random string do not copy this value or your stuff will get hacked
+	  resave: false,
+	  saveUninitialized: false
+}));
+
 
 
 //controllers
 
 const booksController = require("./controllers/books.js");
 app.use("/books", booksController);
+
+const usersController = require("./controllers/users.js");
+app.use("/users", usersController);
+
+const sessionsController = require("./controllers/sessions.js");
+app.use("/sessions", sessionsController);
 
 app.get("/", (req, res) => {
   res.render("home.ejs");

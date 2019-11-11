@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/yortortle/Unit2-Project#readme",
   "dependencies": {
+    "bcrpyt": "^2.0.0",
+    "bcrypt": "^3.0.6",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",

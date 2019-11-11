@@ -84,6 +84,10 @@ router.delete("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   console.log(req.body);
+  const user = req.session.username;
+  console.log(user);
+  // req.body.username1 = user;
+  console.log(req.body);
   Books.create(req.body, (err, createdBook) => {
     if (err) {
       console.log(err);

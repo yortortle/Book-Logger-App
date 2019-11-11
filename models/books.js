@@ -7,7 +7,8 @@ const booksSchema = new mongoose.Schema({
   rating: Number,
   number: {type: Number, default: 1},
   img: String,
-  createdAt: {type: String, default: new Date()}
+  createdAt: {type: String, default: new Date()},
+  username1: String
 })
 
 const Books = mongoose.model("Books", booksSchema);
